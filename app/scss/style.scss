@@ -1,9 +1,144 @@
-@import 'vars';
-@import 'fonts';
-@import 'reser';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reser";
+@import "global";
 
+.header {
+  padding: 47px 0 45px;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
+.logo {
+  display: flex;
+  align-items: center;
 
-@import 'media';
+  &__text {
+    margin-left: 14px;
+    @extend %rubik-500;
+    font-size: 36px;
+    color: $header;
+  }
+}
+
+.menu {
+  margin-left: 146px;
+  padding-bottom: 12px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    &:not(:first-child) {
+      margin-left: 34px;
+    }
+  }
+
+  &__list-link {
+    @extend %rubik-500;
+    font-size: 15px;
+    color: $header;
+    transition: all 0.5s;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+      font-weight: 600;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #edf1f4;
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 18px;
+      left: 18px;
+      background-image: url("../images/icons/search.svg");
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 21px;
+    padding: 0 27px;
+    width: 178px;
+    height: 50px;
+    background-color: #fcd7b6;
+    border-radius: 20px;
+  }
+
+  &__box-heart {
+    position: relative;
+    width: 18px;
+    height: 17px;
+    background-image: url("../images/icons/heart.png");
+  }
+
+  &__border {
+    width: 1px;
+    height: 32px;
+    background-color: #fde7d3;
+  }
+
+  &__box-cart {
+    position: relative;
+    width: 19px;
+    height: 17px;
+    background-image: url("../images/icons/cart.svg");
+  }
+
+  &__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -6px;
+    left: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 10px;
+    color: $default;
+    text-align: center;
+  }
+
+  &__btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #a3bbc8;
+    border: none;
+    border-radius: 50%;
+    margin-left: 18px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 15px;
+      left: 15px;
+      background-image: url("../images/icons/btn.svg");
+    }
+  }
+}
+
+@import "media";

@@ -1,10 +1,11 @@
 @import "vars";
 @import "fonts";
 @import "reser";
+@import "libs";
 @import "global";
 
 .header {
-  padding: 47px 0 45px;
+  padding: 47px 0 41px;
 
   &__inner {
     display: flex;
@@ -140,5 +141,240 @@
     }
   }
 }
+
+main {
+  flex-grow: 1;
+}
+
+
+.footer {
+  padding: 80px 0 35px;
+}
+
+.footer-top {
+  display: flex;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #dae4e9;
+
+  &__item:not(:first-child) {
+    margin-top: 22px;
+  }
+
+  &__logo {
+    margin-bottom: 17px;
+  }
+
+  &__adress {
+    width: 195px;
+  }
+
+  &__adress-item {
+    margin-bottom: 10px;
+  }
+
+  &__adress-text,
+  &__adress-link {
+    font-style: normal;
+    font-size: 14px;
+    color: #7b7b7b;
+  }
+
+  &__title {
+    color: #1f2044;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__list-item {
+    margin-bottom: 7px;
+  }
+
+  &__list-link {
+    font-size: 14px;
+    color: #7b7b7b;
+  }
+
+  &__item--services {
+    margin-left: 103px;
+  }
+
+  &__item--account {
+    margin-left: 184px;
+  }
+
+  &__item--newsletter {
+    max-width: 270px;
+    margin-left: auto;
+  }
+
+  &__text {
+    margin-bottom: 39px;
+    font-size: 14px;
+    color: #7b7b7b;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    max-width: 170px;
+    width: 100%;
+    padding: 4px 10px 7px 16px;
+    background-color: #fef7f0;
+    border: none;
+    &::placeholder {
+      @extend %dmsans-400;
+      font-size: 12px;
+      color: #234969;
+    }
+  }
+
+  &__btn {
+    width: 100px;
+    padding: 8px 0;
+    @extend %dmsans-400;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #a3bbc8;
+    border: none;
+  }
+}
+
+.footer-bottom {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #7b7b7b;
+
+  &__list {
+    display: flex;  
+  }
+
+  &__list-item:not(:first-child) {
+    margin-left: 14px;
+  }
+
+  &__list-item {
+    height: 17px;
+  }
+
+  &__list-item:not(:last-child) {
+    padding-right: 16px;
+    border-right: 2px solid #7b7b7b;
+  }
+
+  &__list-link {
+    line-height: 1;
+    color: #7b7b7b;
+  }
+}
+
+
+.top-slider {
+  &__list-item {
+    background-color: $accent;
+    padding: 100px 187px 85px 300px;
+  }
+  
+  &__list-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    width: 530px;
+    padding-top: 114px;
+  }
+
+  &__title {
+    max-width: 415px;
+    margin-bottom: 24px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 1;
+    color: $default;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 360px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: $header;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 200px;
+    padding: 17px 69px 17px 0;
+    @extend %rubik-500;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #a3bbc8;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      top: 26px;
+      right: 19px;
+      background-image: url('../images/slider/btn.svg');
+    }
+  }
+
+  &__box{
+    position: relative;
+    flex: none;
+    width: 640px;
+    height: 634px;
+    align-items: center;
+    background-image: url('../images/slider/ellipse-slider.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  &__box-img{
+    position: absolute;
+    width: 640px;
+    height: 264px;
+    top: 175px;
+    left: -113px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: -74px;
+    li {
+      padding: 0 6px;
+      button {
+        position: relative;
+        width: 29px;
+        height: 29px;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 1;
+        counter-reset: $default;
+        background-color: #fde3cc;
+        border-radius: 50%;
+        border: none;
+      }
+      &.slick-active {
+        button {
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+
+
 
 @import "media";

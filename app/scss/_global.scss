@@ -24,20 +24,3 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-
-a:hover,
-a:active,
-a:focus {
-  color: $accent;
-  border-bottom: 1px solid $accent;
-  font-weight: 600;
-}
-
-input:hover,
-input:active,
-input:focus,
-button:hover,
-button:active,
-button:focus {
-  border: 1px solid $accent;
-}

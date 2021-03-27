@@ -23,6 +23,12 @@
     @extend %rubik-500;
     font-size: 36px;
     color: $header;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent;
+    }
   }
 }
 
@@ -45,6 +51,7 @@
     font-size: 15px;
     color: $header;
     transition: all 0.5s;
+
     &:hover,
     &:active,
     &:focus {
@@ -73,6 +80,12 @@
       top: 18px;
       left: 18px;
       background-image: url("../images/icons/search.svg");
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $accent;
     }
   }
 
@@ -139,6 +152,12 @@
       left: 15px;
       background-image: url("../images/icons/btn.svg");
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #243f4d;
+    }
   }
 }
 
@@ -179,6 +198,15 @@ main {
     color: #7b7b7b;
   }
 
+  &__adress-link {
+    transition: color 0.5s;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent;
+    }
+  }
+
   &__title {
     color: #1f2044;
     text-transform: uppercase;
@@ -188,10 +216,17 @@ main {
   &__list-item {
     margin-bottom: 7px;
   }
-
+  
   &__list-link {
     font-size: 14px;
     color: #7b7b7b;
+    transition: color 0.5s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent;
+    }
   }
 
   &__item--services {
@@ -223,10 +258,18 @@ main {
     padding: 4px 10px 7px 16px;
     background-color: #fef7f0;
     border: none;
+
     &::placeholder {
       @extend %dmsans-400;
       font-size: 12px;
       color: #234969;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid $accent;
+      color: $accent;
     }
   }
 
@@ -238,6 +281,11 @@ main {
     color: #ffffff;
     background-color: #a3bbc8;
     border: none;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent;
+    }
   }
 }
 
@@ -269,11 +317,18 @@ main {
   &__list-link {
     line-height: 1;
     color: #7b7b7b;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent;
+    }
   }
 }
 
 
 .top-slider {
+  padding-bottom: 45px;
   &__list-item {
     background-color: $accent;
     padding: 100px 187px 85px 300px;
@@ -326,6 +381,12 @@ main {
       right: 19px;
       background-image: url('../images/slider/btn.svg');
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #243f4d;
+    }
   }
 
   &__box{
@@ -351,8 +412,10 @@ main {
     display: flex;
     justify-content: center;
     margin-top: -74px;
+
     li {
       padding: 0 6px;
+
       button {
         position: relative;
         width: 29px;
@@ -364,7 +427,13 @@ main {
         background-color: #fde3cc;
         border-radius: 50%;
         border: none;
+
+        &:hover,
+        &:focus {
+          background-color: #ffffff;
+        }
       }
+
       &.slick-active {
         button {
           background-color: #ffffff;
@@ -374,6 +443,230 @@ main {
   }
 }
 
+.info {
+  &__inner {
+    display: flex;
+    background-color: #fef7f0;
+  }
+
+  &__item:not(:last-child) {
+    border-right: 2px solid #e8e4df;
+  }
+  
+  &__item--first {
+    width: 567px;
+    padding: 41px 0 45px;
+  }
+
+  &__item--second {
+    width: 604px;
+    padding: 50px 0 45px;
+  }
+
+  &__item--third {
+    width: 599px;
+    padding: 40px 0 45px;
+  }
+
+  &__item-support,
+  &__item-delivery,
+  &__item-secure {
+    position: relative;
+    margin: 0 auto;
+    
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 2px;
+    }
+  }
+
+  &__item-support {
+    width: 280px;
+    padding-left: 80px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 51px;
+      height: 53px;
+      background-image: url('../images/support.svg');
+    }
+  }
+
+  &__item-delivery {
+    width: 301px;
+    padding-left: 85px;
+
+    &::before {
+      width: 54px;
+      height: 36px;
+      background-image: url('../images/delivery.svg');
+    }
+  }
+
+  &__item-secure {
+    width: 295px;
+    padding-left: 89px;
+
+    &::before {
+      width: 54px;
+      height: 52px;
+      background-image: url('../images/secure.svg');
+    }
+  }
+
+  &__item-title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    color: #414141;
+    margin-bottom: 5px;
+  }
+
+  &__item-text {
+    @extend %dmsans-400;
+    color: #585858;
+  }
+
+}
+
+.products {
+  padding: 58px 0 85px;
+  
+  &__title {
+    margin-bottom: 18px;
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #191919;
+    text-align: center;
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__btn {
+    padding: 0;
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0 15px;
+  }
+
+
+  &__btn.mixitup-control-active {
+    color: #191919;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    width: 270px;
+    min-height: 380px;
+    padding: 25px 20px 140px;
+    margin-bottom: 40px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    transition: all 0.6s;
+    overflow: hidden;
+
+    &:not(:nth-child(4n+4)) {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      .products__box-link {
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__box-img {
+    position: relative;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__box-link {
+    position: absolute;
+    width: 167px;
+    height: 145px;
+    left: 0;
+    right: 0;
+    bottom: 115px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(300%);
+  }
+  
+  &__item-link {
+    display: inherit;
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #a3bac7;
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  &__box-price {
+    position: absolute;
+    bottom: 35px;
+    left: 83px;
+    text-align: center;
+  }
+
+  &__link-title {
+    display: inherit;
+    @extend %dmsans-500;
+    font-size: 16px;
+    color: $default;
+    margin-bottom: 5px;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent;
+    }
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+}
 
 
 

@@ -1,4 +1,11 @@
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   @extend %rubik-400;
   font-size: 16px;
   line-height: 1.6;
@@ -6,8 +13,14 @@ body {
   color: $default;
 }
 
-.container {
+.big-container {
   max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
